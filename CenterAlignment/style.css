@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#para{  
+    width: 100px;
+	height: 100px;
+	background-color: rgb(195, 197, 159);
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.flex{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.block{
+    transform: translate(45vw,45vh);
+    }
+.pfix{
+  position: fixed;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+.pabs{    
+  position: absolute;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+.margin{
+        margin: auto;
+    width: fit-content;
+        margin-top: 10%;
+}
+.grid{
+    margin: auto;
+}

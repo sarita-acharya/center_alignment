@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Center Alignment</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form  id="ways" onchange="valueChanged()">
+            <input type="checkbox" name="pabs" value="1" /><label>Position Absolute + Translate</label>
+            <input type="checkbox" name="pfix" value="1" /><label>Position Fixed</label>
+            <input  type="checkbox" name="flex" value="1"  /><label>Flex</label>
+            <input type="checkbox" name="block" value="1" /><label>Block + Translate</label>
+            <input type="checkbox" name="grid" value="1" /><label>Grid + Margin auto</label>
+        </form>
+            <div id="para">
+                <div style="background-color:rgb(80, 112, 255);">RED</div>
+                <span>This is span element</span>
+            </div>
+
+
+<script>
+        function valueChanged() {
+
+            if ($('input[name="flex"]').is(":checked")){
+                $("body").toggleClass("flex");
+                $("#ways").hide();
+            } 
+            if ($('input[name="block"]').is(":checked")) {
+                $("#para").toggleClass("block");
+                $("html,body").css({ "display": "block", "height": "100%" });
+                $("#ways").hide();
+            } 
+            if ($('input[name="pfix"]').is(":checked")) {
+                $("#para").toggleClass("pfix");
+                $("#ways").hide();
+            }
+            if ($('input[name="pabs"]').is(":checked")) {
+                $("#para").toggleClass("pabs");
+                $("#ways").hide();
+            } 
+            if ($('input[name="grid"]').is(":checked")) {
+                $("#para").toggleClass("grid");
+                $("html,body").css({"display":"grid","height":"100%"});
+                $("#ways").hide();
+            }
+        }
+</script>
+    </body>
+</html>
